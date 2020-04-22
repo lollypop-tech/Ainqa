@@ -1,0 +1,41 @@
+.aa-footer {
+    margin-bottom: 145px;
+
+    .container {
+        padding: 75px 40px;
+        background-color: #f6f6f6;
+
+        ul {
+            li {
+                a,
+                p {
+                    color: #333333;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 2.1;
+                    transition: all ease 0.3s;
+                }
+
+                a:hover {
+                    color: #40baca;
+                }
+            }
+        }
+
+        .social-list {
+            display: flex;
+            li {
+                margin-right: 10px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

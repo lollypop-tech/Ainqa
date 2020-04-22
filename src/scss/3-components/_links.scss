@@ -1,0 +1,30 @@
+.link-blue {
+    color: $blue;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding-right: 15px;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        right: 0;
+        border-right: 1px solid $blue;
+        border-bottom: 1px solid $blue;
+        height: 7px;
+        width: 7px;
+        transform: rotate(-45deg);
+        transition: all ease 0.3s;
+    }
+
+    &:hover {
+        color: $blue;
+
+        &::after {
+            transform: translateX(5px) rotate(-45deg);
+        }
+    }
+}

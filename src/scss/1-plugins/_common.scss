@@ -17,6 +17,8 @@ ul {
 
 body {
   overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
 }
 
 // main {
@@ -25,4 +27,59 @@ body {
 
 .no-scroll {
   overflow: hidden;
+}
+
+p {
+  font-size: 14px;
+  color: $sec-color;
+}
+
+
+h1 {
+  color: $primary-color;
+  font-size: 68px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: $primary-color;
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 0.28px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+h5 {
+  color: $primary-color;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+h6 {
+  color: #333333;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.section-desc {
+  color: $sec-color;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 645px;
+  margin-bottom: 55px;
+}
+
+.text-desc {
+  color: $sec-color;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
 }

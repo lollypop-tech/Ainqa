@@ -1,9 +1,14 @@
-html
+<!DOCTYPE html>
+html(lang="en")
+
   head
-    title Welcome
+    include ./base/head.pug
+    +head("Home")
 
-  body.text-center.d-flex
-    .d-block.m-auto
-      h2 A bad ass Webpack 4 boilerplate that uses Pug, Scss and ES6+
-      img.webpack-diagram(src="./assets/images/webpack.png")
+  body
+    include ./base/header.pug
 
+    main
+      include ./layouts/home/main.pug
+
+    include ./base/footer.pug

@@ -2,37 +2,13 @@
 		body Fonts
 ============================================= */
 
-main {
-  opacity: 0;
-  // display: none;
-  transition: opacity 0.4s ease;
-}
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  font-size: 14px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  background-color: $primary-color;
-  // opacity: 0;
+  background-color: $w;
 
-  &.is-loaded {
-    overflow-x: hidden;
-    overflow-y: auto;
-    opacity: 1;
-
-    main {
-      opacity: 1;
-      overflow-x: hidden;
-      overflow-y: auto;
-    }
-  }
-
-  @include bp("tab") {
-    font-size: 16px;
-  }
 }
 
 ul,

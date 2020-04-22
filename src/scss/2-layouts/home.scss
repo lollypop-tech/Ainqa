@@ -1,0 +1,203 @@
+.sec-banner {
+    padding: 175px 0 50px;
+
+    .section-desc {
+        margin-bottom: 80px;
+    }
+
+    .img-c {
+        height: auto;
+        width: 100%;
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+}
+
+.sec-padding {
+    padding: 50px 0;
+}
+
+.list-style {
+    .item {
+        .icon-c {
+            height: 90px;
+            width: 90px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom: 40px;
+        }
+
+        h5 {
+          max-width: 250px;
+        }
+
+        .text-desc {
+            max-width: 310px;
+        }
+    }
+}
+
+.card-layout {
+    width: 100%;
+    margin: auto;
+
+    .img-c {
+        height: 305px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 25px;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .date {
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    a {
+        margin-top: 25px;
+    }
+}
+
+.container-styling {
+    padding: 80px 45px 0;
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 60%;
+        width: 100%;
+        // background-image: url("../assets/images/homepage/bg-pattern.png");
+        background-color: #f6f6f6;
+        background-size: cover;
+        z-index: -1;
+    }
+}
+
+.card-layout-list {
+    position: relative;
+    margin-top: 20px;
+
+    .see-all {
+        position: absolute;
+        right: 15px;
+        top: -60px;
+    }
+}
+
+.review-card {
+    .user-img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .review {
+        padding: 35px 0 0;
+        position: relative;
+
+        h5 {
+            margin-bottom: 17px;
+        }
+
+        h6 {
+            margin-bottom: 23px;
+            max-width: 285px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            max-width: 640px;
+        }
+
+        .quotes {
+            position: absolute;
+            width: 105px;
+            height: 80px;
+            width: 105px;
+            height: 78px;
+            right: calc(100% + 35px);
+            top: 0;
+            // background-image: url("../assets/images/homepage/quotes.svg");
+            background-size: contain;
+        }
+    }
+}
+
+.slider-arrows {
+    .slick-arrow {
+        height: 40px;
+        width: 40px;
+        font-size: 0;
+        border-radius: 50%;
+        border: 1px solid #3fbacb;
+        background-color: white;
+        margin-right: 20px;
+        cursor: pointer;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            // background-image: url("../assets/images/homepage/right-arrow.svg");
+            height: 10px;
+            width: 10px;
+            border-right: 1px solid $blue-light;
+            border-bottom: 1px solid $blue-light;
+            transform: translate(-50%,-50%) rotate(-45deg);
+        }
+        
+        &.slick-prev {
+            &::after {
+                transform: translate(-50%,-50%) rotate(135deg);
+            }
+        }
+    }
+}
+
+.slider-dots {
+    z-index: 1;
+
+    .slick-dots {
+        display: flex;
+
+        li {
+            button {
+                height: 7px;
+                width: 7px;
+                background-color: $w;
+                border-radius: 50%;
+                border: 1px solid $blue-light;
+                font-size: 0;
+                margin-right: 8px;
+                padding: 0;
+                cursor: pointer;
+                transition: all ease 0.3s;
+            }
+            
+            &.slick-active {
+                button {
+                    background-color: $blue-light;
+                }
+            }
+        }
+    }
+
+}
