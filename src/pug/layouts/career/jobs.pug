@@ -1,0 +1,78 @@
+section.sec-padding
+    .container
+        .row
+            .col-md-10.text-sm-space
+                h3(data-aos="fade-up" data-aos-duration="800") Working and Thriving together
+                p.section-desc.black.mw-full(data-aos="fade-up" data-aos-duration="800" data-aos-delay="300") Join our movement to revolutionize the future of work
+        form(action="").row.form-styles
+            .col-12.text-sm-space.d-flex-box
+                .form-group
+                    label(for="ca-name") Select Department
+                    select.select_box#ca-name
+                        option(value='all') All Departments
+                        option(value='it') Department 1
+                        option(value='Science') Department 2
+                        option(value='Commerce') Department 3
+
+                .form-group
+                    label(for="ca-lname") Select Positions
+                    select.select_box#ca-lname
+                        option(value='all') All Positions
+                        option(value='it') Position 1
+                        option(value='Science') Position 2
+                        option(value='Commerce') Position 3
+                .d-flex.align-items-center
+                    button.bttn(type="button") Search
+                    a.text-desc.blue Reset
+        .row
+            .col-12.text-sm-space
+                p.result-stat
+                    span 5 
+                    | roles in 
+                    span 3 
+                    | locations
+        ul.row.jobs-list
+            li.col-lg-6.d-flex
+                .job-card(data-aos="fade-up" data-aos-duration="800" data-aos-delay="350")
+                    h5 Data Science
+                    h6 India
+                    .d-md-flex.align-items-center.justify-content-between
+                        p Approaches the problems with statistics, machine learning, graph analysis …
+                        a.bttn.white(href="career-details.html") Apply
+            li.col-lg-6.d-flex
+                .job-card(data-aos="fade-up" data-aos-duration="800" data-aos-delay="350")
+                    h5 Marketing lead
+                    h6 US
+                    .d-md-flex.align-items-center.justify-content-between
+                        p Approaches the problems with statistics, machine learning, graph analysis …
+                        a.bttn.white(href="career-details.html") Apply
+            li.col-lg-6.d-flex
+                .job-card(data-aos="fade-up" data-aos-duration="800" data-aos-delay="350")
+                    h5 Project Manager ||
+                    h6 US
+                    .d-md-flex.align-items-center.justify-content-between
+                        p Approaches the problems with statistics, machine learning, graph analysis …
+                        a.bttn.white(href="career-details.html") Apply
+            li.col-lg-6.d-flex
+                .job-card(data-aos="fade-up" data-aos-duration="800" data-aos-delay="350")
+                    h5 Senior Product Analyst
+                    h6 US
+                    .d-md-flex.align-items-center.justify-content-between
+                        p Approaches the problems with statistics, machine learning, graph analysis …
+                        a.bttn.white(href="career-details.html") Apply
+            li.col-lg-6.d-flex
+                .job-card(data-aos="fade-up" data-aos-duration="800" data-aos-delay="350")
+                    h5 Project Manager ||
+                    h6 US
+                    .d-md-flex.align-items-center.justify-content-between
+                        p Approaches the problems with statistics, machine learning, graph analysis …
+                        a.bttn.white(href="career-details.html") Apply
+            
+            //- li.col-md-6.d-flex
+            //-     .job-card.text(data-aos="fade-up" data-aos-duration="800" data-aos-delay="600")
+            //-         h6 Working and Thriving together
+            //-         p The only way to do great work is to love what you do.
+        .row.d-none
+            .col-12.text-sm-space
+                p.result-stat 0 Results found
+

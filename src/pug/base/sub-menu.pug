@@ -1,3 +1,89 @@
-.container
+.container.header-tab-c
     .row
-        
+        .col-md-3
+            .nav.flex-column.nav-pills(role='tablist' aria-orientation='vertical')
+                a#v-pills-clinical-tab.nav-link.active(data-toggle='pill' href='#v-pills-clinical' role='tab' aria-controls='v-pills-clinical' aria-selected='true') Clinical Research Centre
+                a#v-pills-service-tab.nav-link(data-toggle='pill' href='#v-pills-service' role='tab' aria-controls='v-pills-service' aria-selected='false') Service
+                a#v-pills-platforms-tab.nav-link(data-toggle='pill' href='#v-pills-platforms' role='tab' aria-controls='v-pills-platforms' aria-selected='false') Platforms
+                a#v-pills-platform-tab.nav-link(data-toggle='pill' href='#v-pills-platform' role='tab' aria-controls='v-pills-platform' aria-selected='false') Resources
+                a#v-pills-media-tab.nav-link(data-toggle='pill' href='#v-pills-media' role='tab' aria-controls='v-pills-media' aria-selected='false') Media
+
+        .col-md-9
+            .tab-content
+                #v-pills-clinical.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='v-pills-clinical-tab')
+                    p.section-desc Health articles that keep you informed about the current engagements, ongoing projects
+                    ul.d-flex.header-card-list
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-1.png')")
+                                p Consulting Expertise
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-2.png')")
+                                p Consulting Expertise
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-3.png')")
+                                p Consulting Expertise
+                #v-pills-service.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-service-tab')
+                    p.section-desc Health articles that keep you informed about the current engagements, ongoing projects
+                    ul.d-flex.header-card-list
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-2.png')")
+                                p Consulting Expertise
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-1.png')")
+                                p Consulting Expertise
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-3.png')")
+                                p Consulting Expertise
+                #v-pills-platforms.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-platforms-tab')
+                    p.section-desc Health articles that keep you informed about the current engagements, ongoing projects
+                    ul.d-flex.header-card-list
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-3.png')")
+                                p Consulting Expertise
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-1.png')")
+                                p Consulting Expertise
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-2.png')")
+                                p Consulting Expertise
+                #v-pills-platform.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-platform-tab')
+                    p.section-desc Health articles that keep you informed about the current engagements, ongoing projects
+                    ul.d-flex.header-card-list
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-1.png')")
+                                p Consulting Expertise
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-3.png')")
+                                p Consulting Expertise
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-2.png')")
+                                p Consulting Expertise
+                #v-pills-media.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-media-tab')
+                    p.section-desc Health articles that keep you informed about the current engagements, ongoing projects
+                    ul.d-flex.header-card-list
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-2.png')")
+                                p Consulting Expertise
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-3.png')")
+                                p Consulting Expertise
+                        li
+                            a.header-card(href="consulting.html")
+                                .img-c(style="background-image: url('assets/images/header/head-1.png')")
+                                p Consulting Expertise
+            
+

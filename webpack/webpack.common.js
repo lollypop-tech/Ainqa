@@ -3,7 +3,7 @@ const webpack = require("webpack");
 
 // Plugins
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+// const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -22,7 +22,11 @@ module.exports = {
   entry: {
     vendor: ["whatwg-fetch"],
     common: [path.join(paths.dirSrcJs, "common")],
-    index: ["webpack/hot/only-dev-server", path.join(paths.dirSrcJs, "index")],
+    index: [path.join(paths.dirSrcJs, "index")],
+    contact: [path.join(paths.dirSrcJs, "contact")],
+    "career-details": [path.join(paths.dirSrcJs, "career-details")],
+    "why-us": [path.join(paths.dirSrcJs, "why-us")],
+    "news-media": [path.join(paths.dirSrcJs, "news")],
     about: [path.join(paths.dirSrcJs, "about")]
   },
   output: {
@@ -41,6 +45,10 @@ module.exports = {
         test: /\.js$/,
         use: ["source-map-loader"],
         enforce: "pre"
+      },
+      {
+        test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
+        use: ['url-loader']
       },
       {
         test: /\.pug$/,
@@ -88,11 +96,11 @@ module.exports = {
   ],
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true // set to true if you want JS source maps
-      }),
+      // new UglifyJsPlugin({
+      //   cache: true,
+      //   parallel: true,
+      //   sourceMap: true // set to true if you want JS source maps
+      // }),
       new OptimizeCSSAssetsPlugin({}),
       // Make sure that the plugin is after any plugins that add images
       new ImageminPlugin({

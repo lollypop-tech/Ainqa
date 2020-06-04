@@ -1,0 +1,293 @@
+.form-styles {
+    label {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.66;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    input,
+    textarea,
+    select,
+    .select_wrap {
+        border: none;
+        padding: 0 0 14px;
+        border-bottom: 1px solid #cccccc;
+        width: 100%;
+        color: #333333;
+        font-size: 20px;
+        font-weight: 600;
+
+        &.code {
+            max-width: 50px;
+            margin-right: 20px;
+        }
+
+        &::placeholder {
+            font-size: 20px;
+            font-weight: 600;
+            color: #cccccc;
+        }
+
+        &:focus,
+        &:not(:placeholder-shown) {
+            border-bottom: 1px solid #4f4ad2;
+
+        }
+
+        &.parsley-error {
+            border-bottom: 1px solid red;
+        }
+    }
+
+    .select_wrap{
+        span {
+            opacity: 0.95;
+            color: #333333;
+            font-size: 20px;
+            font-weight: 600;
+            background-color: transparent;
+            padding: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 17px;
+            right: 0;
+            border-right: 1px solid #4f4ad2;
+            border-bottom: 1px solid #4f4ad2;
+            height: 7px;
+            width: 7px;
+            transition: all ease 0.3s;
+            transform: rotate(45deg);
+            transform-origin: center;
+        }
+
+        &.open {
+            &::after {
+                top: 15px;
+                transform: rotate(225deg);
+            }
+        }
+
+        ul {
+            padding: 0 20px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+
+            li {
+                padding: 15px 0;
+                border: 0;
+                border-bottom: 1px solid #dcdbf6;
+                color: #333333;
+                font-size: 14px;
+                font-weight: 400;
+
+                &:hover {
+                    background-color: white;
+                }
+            }
+        }
+    } 
+
+    textarea {
+        height: 90px;
+        resize: none;
+
+        & + p {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 25px;
+            margin: -5px 0 0;
+        }
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+
+    input[type=number] {
+        -moz-appearance: textfield;
+        
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+    .bttn {
+        max-height: 42px;
+    }
+
+    .form-group {
+        margin-bottom: 50px;
+
+        &.file {
+            display: block;
+            align-items: center;
+            flex-wrap: wrap;
+
+            input {
+                display: none;
+            }
+
+            label {
+                padding: 8px 40px 8px 20px;
+                background-color: #eeedfb;
+                color: #4f4ad2;
+                font-size: 14px;
+                font-weight: 600;
+                border-radius: 4px;
+                margin: 0;
+                cursor: pointer;
+
+                img {
+                    height: 20px;
+                    width: auto;
+                    margin-right: 10px;
+                }
+            }
+
+            .added-files {
+                margin-top: 10px;
+
+                span {
+                    color: rgba(0, 0, 0, 0.5);
+                    font-size: 11px;
+                    font-weight: 400;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+
+    .d-flex-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .form-group {
+            margin-right: 20px;
+            width: 100%;
+        }
+
+        button {
+            margin-right: 30px;
+        }
+    }
+
+    @media(max-width: 767.9px) {
+        label {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding-bottom: 8px;
+            font-size: 17px;
+
+            &::placeholder {
+                font-size: 17px;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 35px;
+
+            &.file {
+                display: block;
+
+                label {
+                    font-size: 13px;
+                    padding: 8px 20px;
+                    text-align: center;
+
+                    img {
+                        height: 18px;
+                        margin-right: 8px;
+                    }
+                }
+
+                .added-files {
+                    margin-left: 0;
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        .select_wrap span {
+            font-size: 17px;
+        }
+
+        .d-flex-box {
+            display: block;
+            margin-bottom: 30px;
+    
+            .form-group {
+                margin-right: 0;
+                width: 100%;
+            }
+    
+            button {
+                margin-right: 30px;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.sec-form {
+    padding: 40px 0 80px;
+
+    .container {
+        padding: 80px 60px;
+        border: 1px solid rgba(138, 145, 170, 0.23);
+        border-radius: 15px;
+
+        h1 {
+            margin-top: 110px;
+        }
+    }
+
+    @media(max-width: 991.9px) {
+        padding: 20px 0 40px;
+
+        .container {
+            padding: 25px;
+            width: 90%;
+
+            .illustration {
+                margin: 0 0 30px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            h1 {
+                margin-top: 0;
+                text-align: center;
+            }
+
+            .section-desc {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.parsley-errors-list {
+    li {
+        font-size: 13px;
+        margin-top: 3px;
+        color: red;
+    }
+}

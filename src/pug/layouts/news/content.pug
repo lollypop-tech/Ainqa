@@ -1,0 +1,30 @@
+section.sec-news
+    .container
+        .row
+            .col-lg-9.text-sm-space.order-2
+                ul.nav(role='tablist' data-aos="fade-up" data-aos-duration="800")
+                    li.nav-item
+                        a#recent-tab.nav-link.active(data-toggle='tab' href='#recent' role='tab' aria-controls='recent' aria-selected='true') Most Recent
+                    li.nav-item
+                        a#popular-tab.nav-link(data-toggle='tab' href='#popular' role='tab' aria-controls='popular' aria-selected='false') Most Popular
+                .tab-content(role='tablist' data-aos="fade-up" data-aos-duration="800")
+                    #recent.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='recent-tab') 
+                        include sec-1.pug
+                    #popular.tab-pane.fade(role='tabpanel' aria-labelledby='popular-tab') 
+                        include sec-2.pug
+
+
+            .col-lg-2.text-sm-space.order-lg-2.offset-lg-1
+                ul.side-menu.js-right-sticky
+                    li(data-aos="fade-up" data-aos-duration="800")
+                        a(href="case-studies.html") Case Studies
+                    li(data-aos="fade-up" data-aos-duration="800")
+                        a(href="whitepapers.html") Whitepapers
+                    li(data-aos="fade-up" data-aos-duration="800")
+                        a(href="blogs.html") Blogs
+                    li.active(data-aos="fade-up" data-aos-duration="800")
+                        a(href="news-media.html") News and Media
+                    li(data-aos="fade-up" data-aos-duration="800")
+                        a(href="javascript:void(0)") Events
+                    li(data-aos="fade-up" data-aos-duration="800")
+                        a(href="archived.html") Archived

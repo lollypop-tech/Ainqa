@@ -1,0 +1,42 @@
+.archive-list {
+    li {
+        padding: 25px 0 25px 28px;
+        border-bottom: 1px solid #b9b9b9;
+
+        a {
+            max-width: 90%;
+
+            h5 {
+                margin: 0;
+            }
+        }
+
+        .sec-date {
+            margin-bottom: 5px;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                height: 8px;
+                width: 8px;
+                border: 2px solid #4f4ad2;
+                left: -28px;
+                top: 6px;
+            }
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    @media(max-width: 767px) {
+        li {
+            a {
+                max-width: 100%;
+            }
+        }
+    }
+}

@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "bfa957933d98c9dd1e1c";
+/******/ 	var hotCurrentHash = "ed3ef9e2b61f906ec190";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -258,7 +258,7 @@
 /******/ 				};
 /******/ 			});
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = "about";
+/******/ 			var chunkId = 0;
 /******/ 			// eslint-disable-next-line no-lone-blocks
 /******/ 			{
 /******/ 				/*globals chunkId */
@@ -784,39 +784,32 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://172.20.10.4:3000/";
+/******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// __webpack_hash__
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(3)(__webpack_require__.s = 3);
+/******/ 	return hotCreateRequire(50)(__webpack_require__.s = 50);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/about.js":
-/*!*************************!*\
-  !*** ./src/js/about.js ***!
-  \*************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ 50:
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("console.log(\"Hi, my name is about!\"); // eslint-disable-line no-console//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvanMvYWJvdXQuanM/OWE0NiJdLCJuYW1lcyI6WyJjb25zb2xlIiwibG9nIl0sIm1hcHBpbmdzIjoiQUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVksdUJBQVosRSxDQUFzQyIsImZpbGUiOiIuL3NyYy9qcy9hYm91dC5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImNvbnNvbGUubG9nKFwiSGksIG15IG5hbWUgaXMgYWJvdXQhXCIpOyAvLyBlc2xpbnQtZGlzYWJsZS1saW5lIG5vLWNvbnNvbGVcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/js/about.js\n");
+module.exports = __webpack_require__(51);
+
 
 /***/ }),
 
-/***/ 3:
-/*!****************************!*\
-  !*** multi ./src/js/about ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 51:
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__(/*! E:\LP Dev work\webpack-boilerplate\src\js\about */"./src/js/about.js");
-
+console.log("Hi, my name is about!"); // eslint-disable-line no-console
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=about.js.map

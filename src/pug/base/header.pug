@@ -1,25 +1,40 @@
-header.aa-header
+header.aq-header
     .container
         .row
             .col-12.d-flex.justify-content-between.align-items-center
-                a.logo(href="javascript:void(0)")
+                a.logo(href="index.html" data-aos="fade-in" data-aos-duration="600")
                     img(src="assets/images/logo.svg", alt="logo")
                 ul
-                    li
-                        a(href="javascript:void(0)") Why Ainqa
-                    li
+                    li(data-aos="fade-in" data-aos-duration="600")
+                        a(href="why-us.html") Why Ainqa
+                    li(data-aos="fade-in" data-aos-duration="600")
                         a(href="javascript:void(0)") Insights
-                    li
+                    li(data-aos="fade-in" data-aos-duration="600")
                         a(href="javascript:void(0)") Technology
                     li.has-menu
-                        p More
-                            .header-sub-menu
-                                 include sub-menu.pug
-                    li.search
+                        p(data-aos="fade-in" data-aos-duration="600") More
+                        .header-sub-menu
+                            .inner-div
+                                include sub-menu.pug
+                    li.search(data-aos="fade-in" data-aos-duration="600")
                         a(href="javascript:void(0)") 
                             img(src="assets/images/search-icon.png", alt="search")
-                    li.lang
+                    li.lang(data-aos="fade-in" data-aos-duration="600")
                         a(href="javascript:void(0)") 
                             img(src="assets/images/country.png", alt="lang")
+                        ul.lang-list
+                            li
+                                a(href="javascript:void(0)") 
+                                    img(src="assets/images/country.png", alt="lang")
+                                    p Malaysia
+                            li
+                                a(href="javascript:void(0)") 
+                                    img(src="assets/images/country-2.png", alt="lang")
+                                    p India
+                            li
+                                a(href="javascript:void(0)") 
+                                    img(src="assets/images/country-3.png", alt="lang")
+                                    p UK
+
 
 

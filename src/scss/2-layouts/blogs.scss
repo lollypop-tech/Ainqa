@@ -1,0 +1,103 @@
+.blog-list {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+        margin-bottom: 80px;
+        width: 47%;
+
+        a {
+            display: flex;
+    
+            .img-c {
+                width: 150px;
+                margin-right: 20px;
+    
+                img {
+                    width: 100%;
+                }
+            }
+    
+            .desc {
+                max-width: 225px;
+    
+                h6 {
+                    color: #40baca;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    margin-bottom: 15px;
+                }
+    
+                p {
+                    color: #777476;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    
+                    .date {
+                        position: relative;
+                        padding-left: 30px;
+    
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 15px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 1px;
+                            height: 70%;
+                            background-color: #777476;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media(max-width: 767px) {
+        margin-top: 20px;
+    
+        li {
+            margin-bottom: 35px;
+            width: 100%;
+    
+            a {
+                display: flex;
+        
+                .img-c {
+                    width: 30%;
+                    margin-right: 15px;
+                }
+        
+                .desc {
+                    max-width: 100%;
+                    width: 100%;
+
+        
+                    h6 {
+                        font-size: 13px;
+                        margin-bottom: 10px;
+                    }
+        
+                    p {
+                        font-size: 13px;
+                        line-height: 18px;
+                        
+                        .date {
+                            position: relative;
+                            padding-left: 20px;
+        
+                            &::before {
+                                left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

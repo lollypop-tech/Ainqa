@@ -1,0 +1,32 @@
+section.sec-form
+    .container(data-aos="fade-up" data-aos-duration="800")
+        .row
+            .col-lg-5.vertical-space-between
+                div
+                    h1.mt-0 Send us a message
+                    p.section-desc All the latest news , announcements Ainqa has been a part of. Be updated with all the latest news and subscribe them to find in it your inbox.
+                .illustration
+                    img(src="assets/images/contact/image-2.png", alt="img")
+            form(action="").col-lg-6.offset-lg-1.form-styles#c2-form
+                .row
+                    .col-md-6
+                        .form-group
+                            label(for="c-name") First Name*
+                            input(type="text" id="c-name" placeholder="Enter your first name" required)
+                    .col-md-6
+                        .form-group
+                            label(for="c-lname") Last Name
+                            input(type="text" id="c-lname" placeholder="Enter your last name" required)
+                .form-group
+                    label(for="c-num") Phone Number*
+                    .d-flex
+                        input.code(type="number" id="c-code" placeholder="+943" required data-parsley-errors-messages-disabled)
+                        input(type="number" id="c-num" placeholder="5555 5555 55" required data-parsley-errors-container="#phone-error")
+                    #phone-error
+                .form-group
+                    label(for="c-email") Email Address
+                    input(type="email" id="c-email" placeholder="Enter your Email ID" required)
+                .form-group
+                    label(for="c-letter") Your Message
+                    textarea#cd-letter(name="c-letter" placeholder="Tell us more..")
+                button.bttn.js-validate(type="submit") Submit

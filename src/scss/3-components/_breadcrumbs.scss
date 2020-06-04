@@ -1,0 +1,44 @@
+.breadcrumbs {
+    display: flex;
+
+    li {
+        padding-right: 20px;
+        position: relative;
+
+        a,
+        p {
+            color: #707070;
+            font-size: 14px;
+            font-weight: 400;
+            transition: all ease 0.3s;
+        }
+
+        a:hover {
+            color: #000000;
+        }
+        
+        p {
+            color: #000000;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 7px;
+            right: 9px;
+            height: 7px;
+            width: 7px;
+            border-right: 1px solid #707070;
+            border-bottom: 1px solid #707070;
+            transform: rotate(-45deg);
+        }
+
+        &:last-child {
+            padding-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

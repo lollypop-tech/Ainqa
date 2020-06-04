@@ -1,0 +1,42 @@
+ .list-styling {
+     padding-top: 5px;
+     
+     li {
+         padding-left: 28px;
+         margin-bottom: 15px;
+         position: relative;
+
+         &:before {
+             content: "";
+             position: absolute;
+             border-radius: 50%;
+             height: 8px;
+             width: 8px;
+             border: 2px solid #4f4ad2;
+             left: 0;
+             top: 6px;
+         }
+
+         &:last-child {
+             margin-bottom: 0;
+         }
+     }
+     
+     @media(max-width: 767.9px) {
+         li {
+             padding-left: 25px;
+    
+             &:before {
+                 height: 6px;
+                 width: 6px;
+                 border: 2px solid #4f4ad2;
+                 top: 6px;
+             }
+    
+             &:last-child {
+                 margin-bottom: 0;
+             }
+         }
+         
+     }
+ }
