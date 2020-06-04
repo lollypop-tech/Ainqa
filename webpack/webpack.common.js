@@ -3,7 +3,7 @@ const webpack = require("webpack");
 
 // Plugins
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-// const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -16,7 +16,7 @@ const paths = require("./paths");
 
 const pugTemplates = [];
 const srcll = fs.readdirSync(paths.dirSrcPug);
-srcll.forEach(s => s.endsWith(".pug") && pugTemplates.push(s));
+srcll.forEach((s) => s.endsWith(".pug") && pugTemplates.push(s));
 
 module.exports = {
   entry: {
@@ -31,7 +31,7 @@ module.exports = {
   },
   output: {
     path: paths.dirDist,
-    filename: "js/[name].js"
+    filename: "js/[name].js",
   },
   stats: "none",
   module: {
@@ -39,16 +39,16 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [{ loader: "babel-loader" }]
+        use: [{ loader: "babel-loader" }],
       },
       {
         test: /\.js$/,
         use: ["source-map-loader"],
-        enforce: "pre"
+        enforce: "pre",
       },
       {
         test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
-        use: ['url-loader']
+        use: ["url-loader"],
       },
       {
         test: /\.pug$/,
@@ -57,20 +57,20 @@ module.exports = {
           {
             loader: "pug-html-loader",
             options: {
-              pretty: true
-            }
-          }
-        ]
+              pretty: true,
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
-        use: ["css-hot-loader", MiniCssExtractPlugin.loader, "css-loader"]
-      }
-    ]
+        use: ["css-hot-loader", MiniCssExtractPlugin.loader, "css-loader"],
+      },
+    ],
   },
   plugins: [
     ...pugTemplates.map(
-      templateName =>
+      (templateName) =>
         new HtmlWebPackPlugin({
           inject: true,
           template: `./src/pug/${templateName}`,
@@ -78,29 +78,39 @@ module.exports = {
             paths.dirDist,
             templateName.replace(".pug", ".html")
           ),
-          chunks: ["common", "vendor", templateName.replace(".pug", "")],
           minify: false,
-          alwaysWriteToDisk: true
+          alwaysWriteToDisk: true,
         })
     ),
     new MiniCssExtractPlugin({
-      filename: "css/app.css"
+      filename: "css/main.css",
     }),
     new CopyWebpackPlugin([
       {
         from: "src/assets",
-        to: "assets"
-      }
+        to: "assets",
+      },
     ]),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.ProvidePlugin({
+    //   $: "jquery",
+    //   jQuery: "jquery",
+    // }),
   ],
+
   optimization: {
     minimizer: [
-      // new UglifyJsPlugin({
-      //   cache: true,
-      //   parallel: true,
-      //   sourceMap: true // set to true if you want JS source maps
-      // }),
+      new TerserPlugin({
+        parallel: true,
+        cache: true,
+        extractComments: true,
+        terserOptions: {
+          ecma: 5,
+          ie8: false,
+          compress: true,
+          warnings: true,
+        },
+      }),
       new OptimizeCSSAssetsPlugin({}),
       // Make sure that the plugin is after any plugins that add images
       new ImageminPlugin({
@@ -108,21 +118,34 @@ module.exports = {
         // Disable during development
         disable: process.env.NODE_ENV !== "production",
         pngquant: {
-          quality: "95-100"
-        }
-      })
-    ]
-    // namedModules: true, // NamedModulesPlugin()
-    // splitChunks: {
-    //   // CommonsChunkPlugin()
-    //   name: "vendor",
-    //   minChunks: 2,
-    //   maxInitialRequests: 20, // for HTTP2
-    //   maxAsyncRequests: 20, // for HTTP2
-    //   minSize: 40 // for example only: chosen to match 2 modules
-    //   // omit minSize in real use case to use the default of 30kb
-    // },
-    // noEmitOnErrors: true, // NoEmitOnErrorsPlugin
-    // concatenateModules: true // ModuleConcatenationPlugin
-  }
+          quality: "95-100",
+        },
+      }),
+    ],
+    splitChunks: {
+      cacheGroups: {
+        /**
+         * Vendor chunk
+         */
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all",
+        },
+        /**
+         * Common code chunk
+         */
+        // commons: {
+        //   name: "commons",
+        //   chunks: "initial",
+        //   minChunks: 2,
+        // },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
+    },
+  },
 };
