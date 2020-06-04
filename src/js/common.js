@@ -2,14 +2,14 @@ import "../scss/main.scss";
 
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-import "babel-polyfill";
+// import "babel-polyfill";
 
 import "../pug/index.pug";
 import "../pug/about.pug";
 
 import AOS from 'aos';
 import $ from 'jquery';
-import "bootstrap/js/src/tab";
+// import "bootstrap/js/src/tab";
 
 import "../js/components/select-drop";
 import "bootstrap/js/dist/tab";
@@ -23,7 +23,7 @@ $(window).on('load', function () {
 
   setTimeout(function () {
     $('.loader-wrapper').fadeOut("fast");
-  }, 1000)
+  }, 1000);
 
 
   setTimeout(function () {
@@ -52,6 +52,5 @@ $(window).scroll(function (event) {
   }
   else {
     $(".aq-header").removeClass("box-shadow")
-
   }
 });
